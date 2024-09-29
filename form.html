@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>School Registration Form</h2>
+
+        <form action="/submit_form" method="POST">
+
+            <!-- Student's Name -->
+            <div class="form-group">
+                <label for="name">Student's Name:</label>
+                <input type="text" id="name" name="student_name" required>
+            </div>
+
+            <!-- Date of Birth -->
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="student_dob" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="form-group">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="student_gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="student_gender" value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="other" name="student_gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <!-- Grade Level -->
+            <div class="form-group">
+                <label for="grade">Grade Level:</label>
+                <select id="grade" name="student_grade">
+                    <option value="Kindergarten">Kindergarten</option>
+                    <option value="1st Grade">1st Grade</option>
+                    <option value="2nd Grade">2nd Grade</option>
+                    <option value="3rd Grade">3rd Grade</option>
+                    <option value="4th Grade">4th Grade</option>
+                    <option value="5th Grade">5th Grade</option>
+                </select>
+            </div>
+
+            <!-- Parent/Guardian Email -->
+            <div class="form-group">
+                <label for="email">Parent/Guardian Email:</label>
+                <input type="email" id="email" name="parent_email" required>
+            </div>
+
+            <!-- Address -->
+            <div class="form-group">
+                <label for="address">Home Address:</label>
+                <textarea id="address" name="home_address" rows="4" required></textarea>
+            </div>
+
+            <!-- Extracurricular Activities -->
+            <div class="form-group">
+                <label>Extracurricular Activities:</label>
+                <input type="checkbox" id="sports" name="activities" value="sports">
+                <label for="sports">Sports</label>
+                <input type="checkbox" id="music" name="activities" value="music">
+                <label for="music">Music</label>
+                <input type="checkbox" id="art" name="activities" value="art">
+                <label for="art">Art</label>
+                <input type="checkbox" id="science" name="activities" value="science">
+                <label for="science">Science Club</label>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit Registration</button>
+
+        </form>
+    </div>
+
+</body>
+</html>

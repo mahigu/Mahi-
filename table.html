@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        td {
+            background-color: #fafafa;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h2>Student Marks Table</h2>
+
+    <table>
+        <tr>
+            <th rowspan="2">Student Name</th>
+            <th colspan="3">Subjects</th>
+            <th rowspan="2">Total Marks</th>
+        </tr>
+        <tr>
+            <th>Math</th>
+            <th>Science</th>
+            <th>English</th>
+        </tr>
+        <tr>
+            <td rowspan="2">John Doe</td>
+            <td>90</td>
+            <td>85</td>
+            <td>88</td>
+            <td rowspan="2">263</td>
+        </tr>
+        <tr>
+            <td>80</td>
+            <td>92</td>
+            <td>91</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Jane Smith</td>
+            <td>85</td>
+            <td>89</td>
+            <td>87</td>
+            <td rowspan="2">261</td>
+        </tr>
+        <tr>
+            <td>88</td>
+            <td>90</td>
+            <td>83</td>
+        </tr>
+    </table>
+
+</body>
+</html>
